@@ -1,13 +1,9 @@
 import { Router } from 'express';
-
+import OrphanagesController from './controllers/orphanagesController';
 const routes = Router();
 
-routes.get('/', (req,res)=>{
-    res.json("Hello World");
-})
+routes.get('/orphanages', OrphanagesController.index );
 
-routes.post('/orphanages', async (req, res)=>{
-    
-})
+routes.post('/orphanages', OrphanagesController.create);
 
 export default routes;
