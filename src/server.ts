@@ -1,9 +1,11 @@
 import express from 'express';
+import './database/connection';
 
 const app = express();
+app.use(express.json())
 
 app.get('/', (req,res)=>{
-    res.send("Hello World");
+    res.json("Hello World");
 })
 
 app.listen(3333);
