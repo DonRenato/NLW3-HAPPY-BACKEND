@@ -12,7 +12,7 @@ export default{
             relations: ['images']
         });
 
-        return res.json(orphanages);
+        return res.json(orphanagesView.renderMany(orphanages));
     },
 
     async show(req: Request, res: Response){
